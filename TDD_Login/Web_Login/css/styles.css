@@ -1,0 +1,43 @@
+﻿body {
+}
+
+#logo {
+    margin: 0 auto;
+    display: block;
+}
+
+#menu_container {
+    display: table;
+    margin: 0 auto;
+}
+
+#Menu1 {
+}
+
+#Menu1 li {
+    border: solid #11479D 1px;
+    background-color: #21AFC7;
+    margin: 10px 5px;
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.content{
+    margin: 10% auto 0 auto;
+    border: solid #11479D 1px;
+}
+
+.content tr td{
+    padding: 10px;
+}
+
+#LabelDia, #LabelMes, #LabelAnio {
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.TdToRight{
+    text-align: right;
+    border-right: solid #11479D 1px;
+}
