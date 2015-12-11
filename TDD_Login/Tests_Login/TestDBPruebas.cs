@@ -73,30 +73,36 @@ namespace Tests_Login
         public void TestDesbloqueaUsuario()
         {
             DBPruebas db = fabrica();
-            String userName = "userTest3";
-            db.creaUsuario(userName, "Nombre 3", "Apellidos 3", "pass3", TipoUsuario.ADMINISTRADOR);
+            String userName = "usuarioBloqueado2";
+            Assert.IsFalse(db.valida(userName, "pass2"));
+            Assert.IsTrue(db.desbloqueaUsuario(userName));
+            Assert.IsTrue(db.valida(userName, "pass2"));
 
-            //TODO
+            userName = "userTest4";
+            db.creaUsuario(userName, "Nombre 4", "Apellidos 4", "pass4", TipoUsuario.ADMINISTRADOR);
+            Assert.IsFalse(db.desbloqueaUsuario(userName)); // No está bloqueado
         }
 
         [TestMethod()]
-        public void TestBorrarLog()
+        public void TestBorrarLog_VerLog()
         {
             DBPruebas db = fabrica();
-            String userName = "userTest3";
-            db.creaUsuario(userName, "Nombre 3", "Apellidos 3", "pass3", TipoUsuario.ADMINISTRADOR);
-
-            //TODO
+            Assert.AreEqual(db.verLog().Count, 5);
+            Assert.IsTrue(db.borrarLog());
+            Assert.AreEqual(db.verLog().Count, 0);
         }
 
         [TestMethod()]
-        public void TestGrabaEvento()
+        public void TestLanzaEvento()
         {
             DBPruebas db = fabrica();
-            String userName = "userTest3";
-            db.creaUsuario(userName, "Nombre 3", "Apellidos 3", "pass3", TipoUsuario.ADMINISTRADOR);
-
-            //TODO
+            String userName = "userTest5";
+            db.creaUsuario(userName, "Nombre 5", "Apellidos 5", "pass5", TipoUsuario.ADMINISTRADOR);
+            Assert.IsTrue(db.borrarLog());
+            Assert.IsTrue(db.lanzaEvento(userName, "login", TipoEvento.LOGIN_EXITO));
+            Assert.IsTrue(db.verLog().Any(x => x.TipoEvento == TipoEvento.LOGIN_EXITO));
+            Assert.IsTrue(db.verLog().Any(x => x.Username == userName));
+            Assert.IsTrue(db.verLog().Any(x => x.Seccion == "login"));
         }
     }
     

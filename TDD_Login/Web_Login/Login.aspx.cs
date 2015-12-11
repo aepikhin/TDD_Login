@@ -16,7 +16,7 @@ namespace Web_Login
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Log.aspx");
         }
 
         protected void ButtonCancelar_Click(object sender, EventArgs e)

@@ -32,6 +32,12 @@
     padding: 10px;
 }
 
+.contentLog tr td, .contentLog tr th{
+    padding: 10px;
+    border-left: solid #11479D 1px;
+    border-bottom: solid #11479D 1px;
+}
+
 #LabelDia, #LabelMes, #LabelAnio {
     padding-right: 10px;
     padding-top: 10px;
