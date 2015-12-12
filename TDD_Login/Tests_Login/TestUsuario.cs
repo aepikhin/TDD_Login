@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clases_Login;
 
 namespace Tests_Login
 {
@@ -57,7 +58,7 @@ namespace Tests_Login
         {
             Usuario user = fabrica();
             Assert.AreNotEqual(user.Password, "pass1");
-            Assert.AreEqual(user.Password, "pass1".GetHashCode());
+            Assert.AreEqual(user.Password, "" + "pass1".GetHashCode());
             Assert.AreNotEqual(user.Password, "pass2".GetHashCode());
         }
 

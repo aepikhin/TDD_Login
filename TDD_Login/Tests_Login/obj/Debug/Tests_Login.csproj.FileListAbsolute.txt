@@ -1,1 +1,7 @@
 D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\obj\Debug\Tests_Login.csprojResolveAssemblyReference.cache
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\bin\Debug\Tests_Login.dll
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\bin\Debug\Tests_Login.pdb
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\bin\Debug\Clases_Login.dll
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\bin\Debug\Clases_Login.pdb
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\obj\Debug\Tests_Login.dll
+D:\UNI\Semestre 7\VALID. Y PRUEB - prac\Proyects\TDD_Login\TDD_Login.git\trunk\TDD_Login\Tests_Login\obj\Debug\Tests_Login.pdb

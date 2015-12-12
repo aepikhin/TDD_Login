@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clases_Login;
 
 namespace Tests_Login
 {
@@ -28,32 +29,32 @@ namespace Tests_Login
         public void TestUsername()
         {
             Evento evento = fabrica();
-            Assert.AreEqual(user.Username, "user1");
-            Assert.AreNotEqual(user.Username, "user2");
+            Assert.AreEqual(evento.Username, "user1");
+            Assert.AreNotEqual(evento.Username, "user2");
         }
 
         [TestMethod]
         public void TestSeccion()
         {
             Evento evento = fabrica();
-            Assert.AreEqual(user.Seccion, "login");
-            Assert.AreNotEqual(user.Seccion, "login2");
+            Assert.AreEqual(evento.Seccion, "login");
+            Assert.AreNotEqual(evento.Seccion, "login2");
         }
 
         [TestMethod]
         public void TestTipoEvento()
         {
             Evento evento = fabrica();
-            Assert.AreEqual(user.TipoEvento, TipoEvento.LOGIN_EXITO);
-            Assert.AreNotEqual(user.TipoEvento, TipoEvento.LOGIN_FALLIDO);
+            Assert.AreEqual(evento.TipoEvento, TipoEvento.LOGIN_EXITO);
+            Assert.AreNotEqual(evento.TipoEvento, TipoEvento.LOGIN_FALLIDO);
         }
 
         [TestMethod]
         public void TestFecha()
         {
             Evento evento = fabrica();
-            Assert.AreEqual(user.Fecha, fecha);
-            Assert.AreNotEqual(user.Fecha, fecha.AddDays(-3));
+            Assert.AreEqual(evento.Fecha, fecha);
+            Assert.AreNotEqual(evento.Fecha, fecha.AddDays(-3));
         }
 
         [TestMethod()]

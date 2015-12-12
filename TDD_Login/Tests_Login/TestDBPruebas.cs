@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clases_Login;
+using System.Linq;
 
 namespace Tests_Login
 {
@@ -28,10 +30,9 @@ namespace Tests_Login
             DBPruebas db = fabrica();
 
             Assert.IsTrue(db.valida("admin1", "pass1"));
-            Assert.IsFalse(db.valida("admin1", "pass1".GetHashCode()));
+            Assert.IsFalse(db.valida("admin1", "" + "pass1".GetHashCode()));
             Assert.IsFalse(db.valida("admin1", "pass2"));
-
-            Assert.IsTrue(db.valida("admin1", "pass1"));
+            
             Assert.IsFalse(db.valida("admin2", "pass1"));
 
             Assert.IsFalse(db.valida("usuarioBloqueado1", "pass1"));
@@ -80,7 +81,7 @@ namespace Tests_Login
 
             userName = "userTest4";
             db.creaUsuario(userName, "Nombre 4", "Apellidos 4", "pass4", TipoUsuario.ADMINISTRADOR);
-            Assert.IsFalse(db.desbloqueaUsuario(userName)); // No está bloqueado
+            Assert.IsFalse(db.desbloqueaUsuario(userName)); // No está bloqueado, por lo tanto da False.
         }
 
         [TestMethod()]

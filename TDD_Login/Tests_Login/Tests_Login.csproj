@@ -57,6 +57,12 @@
     <Compile Include="TestEvento.cs" />
     <Compile Include="TestUsuario.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clases_Login\Clases_Login.csproj">
+      <Project>{EE493B93-C541-44DF-B7E9-C133808D8F55}</Project>
+      <Name>Clases_Login</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
