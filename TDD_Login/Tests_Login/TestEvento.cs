@@ -64,6 +64,13 @@ namespace Tests_Login
         }
 
         [TestMethod()]
+        public void TestBorraFichero()
+        {
+            Evento evento = fabrica();
+            Assert.IsTrue(evento.borraFichero());
+        }
+
+        [TestMethod()]
         public void TestEquals()
         {// Fechas no detalladas con hora.
             Evento evento = fabrica();

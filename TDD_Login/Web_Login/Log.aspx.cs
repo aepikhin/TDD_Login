@@ -12,11 +12,11 @@ namespace Web_Login
         protected void Page_Load(object sender, EventArgs e)
         {
             // HEADER
-            List<String> header = new List<String>(new String[] { "Fecha", "Usuario", "Tipo de acceso", "Seción", "Evento" });
+            List<String> header = new List<String>(new String[] { "Fecha", "Usuario", "Tipo de acceso", "Seción" });
             TableRow tRow = new TableRow();
             TableLog.Rows.Add(tRow);
             TableCell tCell;
-            for(int i = 0; i < 5; i++)
+            for(int i = 0; i < 4; i++)
             {
                 tCell = new TableCell();
                 tRow.Cells.Add(tCell);
@@ -29,7 +29,7 @@ namespace Web_Login
             {
                 tRow = new TableRow();
                 TableLog.Rows.Add(tRow);
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     tCell = new TableCell();
                     tRow.Cells.Add(tCell);
@@ -41,7 +41,7 @@ namespace Web_Login
             TableLog.Rows.Add(tRow);
             tCell = new TableCell();
             tRow.Cells.Add(tCell);
-            tCell.ColumnSpan = 3;
+            tCell.ColumnSpan = 2;
 
             // BOTONES
             Button btn1 = new Button();
