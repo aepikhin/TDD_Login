@@ -75,10 +75,13 @@ namespace Tests_Login
         public void TestEquals()
         {// Fechas no detalladas con hora.
             Evento evento = fabrica();
+            Evento evento1 = new Evento("user1", "login", TipoEvento.LOGIN_EXITO, fecha);
+            Assert.IsTrue(evento1.grabaFichero());
             Evento evento2 = new Evento("user2", "table", TipoEvento.BORRADO, fecha);
             Evento evento3 = new Evento("user2", "table", TipoEvento.BORRADO, fecha.AddDays(-3));
-            Assert.IsTrue(evento.Equals(evento2));
-            Assert.IsFalse(evento.Equals(evento3));
+            Assert.IsTrue(evento1.Equals(evento2));
+            Assert.IsFalse(evento1.Equals(evento3));
+            Assert.IsTrue(evento1.borraFichero());
         }
     }
 }

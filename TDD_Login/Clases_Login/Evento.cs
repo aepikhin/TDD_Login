@@ -9,7 +9,7 @@ namespace Clases_Login
         private TipoEvento tipoEvento;
         private string username;
         private string seccion;
-        private string path = @"..\..\..\ServerLog.log";
+        private string path = @"ServerLog.log";
 
         public Evento(string username, string seccion, TipoEvento tipoEvento, DateTime fecha)
         {
@@ -78,6 +78,7 @@ namespace Clases_Login
         LOGIN_EXITO = 1,
         LOGIN_FALLIDO = 2,
         BORRADO = 3,
-        BORRADO_ILEGAL = 4
+        BORRADO_ILEGAL = 4,
+        LOGOUT = 5
     }
 }

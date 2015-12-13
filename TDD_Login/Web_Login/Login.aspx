@@ -18,7 +18,7 @@
                 </tr>
                 <tr>
                     <td class="TdToRight"><asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label></td>
-                    <td colspan="2"><asp:TextBox ID="TextPassword" runat="server" TabIndex="2"></asp:TextBox></td>
+                    <td colspan="2"><asp:TextBox ID="TextPassword" runat="server" TabIndex="2" TextMode="Password"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="TdToRight"></td>

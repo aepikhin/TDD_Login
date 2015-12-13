@@ -88,6 +88,11 @@ namespace Tests_Login
         public void TestBorrarLog_VerLog()
         {
             DBPruebas db = fabrica();
+            db.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
+            db.lanzaEvento("pepe1", "login_screen", TipoEvento.BORRADO_ILEGAL);
+            db.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
+            db.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_FALLIDO);
+            db.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
             Assert.AreEqual(db.verLog().Count, 5);
             Assert.IsTrue(db.borrarLog());
             Assert.AreEqual(db.verLog().Count, 0);
@@ -99,11 +104,11 @@ namespace Tests_Login
             DBPruebas db = fabrica();
             String userName = "userTest5";
             db.creaUsuario(userName, "Nombre 5", "Apellidos 5", "pass5", TipoUsuario.ADMINISTRADOR);
-            Assert.IsTrue(db.borrarLog());
             Assert.IsTrue(db.lanzaEvento(userName, "login", TipoEvento.LOGIN_EXITO));
             Assert.IsTrue(db.verLog().Any(x => x.TipoEvento == TipoEvento.LOGIN_EXITO));
             Assert.IsTrue(db.verLog().Any(x => x.Username == userName));
             Assert.IsTrue(db.verLog().Any(x => x.Seccion == "login"));
+            Assert.IsTrue(db.borrarLog());
         }
     }
     

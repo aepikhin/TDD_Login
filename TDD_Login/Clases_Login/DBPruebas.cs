@@ -93,6 +93,7 @@ namespace Clases_Login
         private void inicializarDatos()
         {
             this.creaUsuario("admin1", "Nombre Admin1", "Apellidos Admin1", "pass1", TipoUsuario.ADMINISTRADOR);
+            this.creaUsuario("normal1", "Nombre 1", "Apellidos 1", "pass1", TipoUsuario.BECARIO);
             this.creaUsuario("usuarioBloqueado1", "Nombre Bloq1", "Apellidos Bloq1", "pass1", TipoUsuario.BECARIO);
             for (int i = 0; i < users.Count; i++)
                 if (users[i].UserName == "usuarioBloqueado1")
@@ -101,11 +102,6 @@ namespace Clases_Login
             for (int i = 0; i < users.Count; i++)
                 if (users[i].UserName == "usuarioBloqueado2")
                     users[i].NumeroIntentosLogin = 0;
-            this.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
-            this.lanzaEvento("pepe1", "login_screen", TipoEvento.BORRADO_ILEGAL);
-            this.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
-            this.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_FALLIDO);
-            this.lanzaEvento("pepe1", "login_screen", TipoEvento.LOGIN_EXITO);
         }
     }
 }
