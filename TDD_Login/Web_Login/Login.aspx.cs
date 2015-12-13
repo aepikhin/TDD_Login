@@ -37,7 +37,7 @@ namespace Web_Login
                 string usuario = (TextUsername.Text.Trim() == "") ? "Desconocido" : TextUsername.Text;
                 db.lanzaEvento(usuario, "LoginWindow", TipoEvento.LOGIN_FALLIDO);
                 TextUsername.Focus();
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", "alert('Nombre de usuario y/o contraseña incorrectos.');", true);
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", "alert('Nombre de usuario y/o contraseña incorrectos. O usuario bloqueado.');", true);
             }
         }
 

@@ -41,19 +41,9 @@ namespace Clases_Login
 
         public bool grabaFichero()
         {
-            if (!File.Exists(path))
-            {
-                File.Create(path).Close();
-                TextWriter tw = new StreamWriter(path);
-                tw.WriteLine(this.Fecha + " - " + this.Username + " - " + this.Seccion + " - " + this.TipoEvento + "\n");
-                tw.Close();
-            }
-            else if (File.Exists(path))
-            {
-                TextWriter tw = new StreamWriter(path, true);
-                tw.WriteLine(this.Fecha + " - " + this.Username + " - " + this.Seccion + " - " + this.TipoEvento + "\n");
-                tw.Close();
-            }
+            TextWriter tw = new StreamWriter(path, true);
+            tw.WriteLine(this.Fecha + " - " + this.Username + " - " + this.Seccion + " - " + this.TipoEvento + "\n");
+            tw.Close();
             return true;
         }
 
